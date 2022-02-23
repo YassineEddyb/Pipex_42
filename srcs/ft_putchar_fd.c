@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:05:35 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/01 19:18:42 by yed-dyb          ###   ########.fr       */
+/*   Created: 2021/11/04 20:10:12 by yed-dyb           #+#    #+#             */
+/*   Updated: 2022/02/18 11:45:11 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "lib.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	write(fd, &c, 1);
 }
+
+/*int main() {
+	int fd = open("./test", 2);
+	ft_putchar_fd('z', fd);
+}*/

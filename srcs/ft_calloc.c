@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 10:01:12 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/06 13:01:04 by yed-dyb          ###   ########.fr       */
+/*   Created: 2021/11/02 21:19:07 by yed-dyb           #+#    #+#             */
+/*   Updated: 2022/02/18 11:45:15 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib.h"
 
-t_list	*ft_lstnew(void *content)
+char	*ft_calloc(size_t count, size_t size)
 {
-	t_list	*list;
+	size_t		i;
+	char		*ptr;
 
-	list = malloc(sizeof(t_list));
-	if (!list)
+	i = 0;
+	ptr = malloc(count * size);
+	if (!ptr)
 		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	while (i < count * size)
+	{
+		ptr[i] = 0;
+		i++;
+	}
+	return (ptr);
 }
-
-/*int main () {
-	t_list *l;
-	l = ft_lstnew("hello");
-	printf("%s", l->content);
-}*/

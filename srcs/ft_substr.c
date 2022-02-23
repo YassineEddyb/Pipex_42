@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 09:38:55 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/09 14:37:46 by yed-dyb          ###   ########.fr       */
+/*   Updated: 2022/02/18 19:57:57 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -36,7 +36,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (substr);
 }
-
-/*int main () {
-	printf("%s", ft_substr("tripouille", 1, 1));
-}*/

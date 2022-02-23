@@ -6,14 +6,14 @@
 /*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 10:25:50 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/12/09 18:39:53 by yed-dyb          ###   ########.fr       */
+/*   Updated: 2022/02/18 11:53:35 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include "../libft/libft.h"
+# include "../srcs/lib.h"
 # include<stdlib.h>
 # include<unistd.h>
 

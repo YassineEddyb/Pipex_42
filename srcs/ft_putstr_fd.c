@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 19:24:47 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/11 12:43:09 by yed-dyb          ###   ########.fr       */
+/*   Created: 2021/11/04 20:31:00 by yed-dyb           #+#    #+#             */
+/*   Updated: 2022/02/18 11:41:22 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "lib.h"
+
+void	ft_putstr_fd(char *str, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	int		index;
+
+	if (!str)
+		return ;
+	index = 0;
+	while (str[index] != '\0')
+	{
+		ft_putchar_fd(str[index], fd);
+		index++;
+	}
 }

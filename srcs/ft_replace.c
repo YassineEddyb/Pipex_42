@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_replace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:03:57 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/03 09:14:59 by yed-dyb          ###   ########.fr       */
+/*   Created: 2022/02/21 15:07:29 by yed-dyb           #+#    #+#             */
+/*   Updated: 2022/02/21 15:12:30 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlen(const char *s)
+void	ft_replace(char *s, char rm, char rp)
 {
 	int	i;
 
-	i = 0;
-	while (s[i])
+	i = 1;
+	while (s[i] != '\'')
+	{
+		if (s[i] == rm)
+			s[i] = rp;
 		i++;
-	return (i);
+	}
 }

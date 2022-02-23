@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibnada <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:02:57 by ibnada            #+#    #+#             */
-/*   Updated: 2021/11/11 12:28:37 by yed-dyb          ###   ########.fr       */
+/*   Updated: 2022/02/18 19:57:19 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib.h"
 
 static int	count_words(const char *s, char c)
 {
@@ -97,14 +97,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (arr);
 }
-
-/*int main () {
-	char **arr;
-	arr = ft_split("      split       this for   me  !", ' ');
-	int i = 0;
-	while(i < 3)
-	{
-		printf("%s\n", arr[i]);
-		i++;
-	}
-}*/

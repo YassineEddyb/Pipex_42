@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 17:02:46 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/07 10:14:46 by yed-dyb          ###   ########.fr       */
+/*   Created: 2021/11/01 12:03:57 by yed-dyb           #+#    #+#             */
+/*   Updated: 2022/02/18 18:04:48 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+size_t	ft_strlen(const char *s)
 {
-	t_list	*tmp;
+	int	i;
 
-	if (lst)
-	{
-		while (*lst)
-		{
-			tmp = *lst;
-			*lst = (*lst)->next;
-			del(tmp->content);
-			free(tmp);
-		}
-		lst = NULL;
-	}
+	if (!s)
+		return (0);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

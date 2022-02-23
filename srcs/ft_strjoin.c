@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:02:34 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/08 20:50:19 by yed-dyb          ###   ########.fr       */
+/*   Updated: 2022/02/18 11:41:39 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "lib.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -37,7 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-
-/*int main () {
-	printf("%s", ft_strjoin("", "42"));
-}*/

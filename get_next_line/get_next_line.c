@@ -6,7 +6,7 @@
 /*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:59:19 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/12/08 21:00:04 by yed-dyb          ###   ########.fr       */
+/*   Updated: 2022/02/18 20:10:41 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,14 +95,3 @@ char	*get_next_line(int fd)
 	save = get_remain(save);
 	return (line);
 }
-
-/*int main()
-{
-    int fd = open("./test", 2);
-    int i = 0;
-    while(i < 3)
-    {
-        printf("%s", get_next_line(fd));
-        i++;
-    }
-}*/

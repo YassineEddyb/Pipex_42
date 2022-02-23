@@ -6,21 +6,24 @@
 /*   By: yed-dyb <yed-dyb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 11:46:47 by yed-dyb           #+#    #+#             */
-/*   Updated: 2022/02/12 19:41:16 by yed-dyb          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:21:11 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-void	read_form_stdout(char *limit, int *p)
+void	read_form_stdout(char *limit, int fd)
 {
 	char	*line;
 
-	while (ft_strncmp(limit, line, ft_strlen(line)))
+	line = get_next_line(0);
+	while (ft_strncmp(limit, line, ft_strlen(limit)))
 	{
-		write(p[1], line, ft_strlen(line));
-		line = get_next_line(1);
+		write(fd, line, ft_strlen(line));
+		free(line);
+		line = get_next_line(0);
 	}
+	free(line);
 }
 
 void	close_unused_pipes(t_cmd *cmd, int process_index, int size)
@@ -74,6 +77,7 @@ void	get_path(t_cmd *cmd, char **arr, char *command, int i)
 	j = 0;
 	while (arr[j])
 	{
+		cmd[i].path = NULL;
 		path = ft_strjoin(arr[j], command);
 		a = access(path, F_OK);
 		if (a == 0)
@@ -84,6 +88,4 @@ void	get_path(t_cmd *cmd, char **arr, char *command, int i)
 		free(path);
 		j++;
 	}
-	if (!cmd[i].path)
-		cmd[i].path = cmd[i].args[0];
 }
